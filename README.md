@@ -1,70 +1,110 @@
-# InOrbit API
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=180&section=header&text=InOrbit%20API&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Goal%20Tracking%20REST%20API&descSize=18&descAlignY=52"/>
+</div>
 
-REST API for a weekly goal tracker built with Fastify and Drizzle ORM.
+<p align="center">
+  ![Fastify](https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+  ![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=for-the-badge)
+  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql)
+  ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
+  ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger)
+</p>
+
+## Overview
+
+A high-performance REST API for weekly goal tracking built with **Fastify** and **Drizzle ORM**. Create goals, track completions, and get weekly summaries with an optimized PostgreSQL backend.
+
+## Features
+
+- Create weekly goals with desired frequency
+- Mark daily goal completions
+- Get pending goals for the current week
+- Weekly completion summary with visual progress
+- Swagger/OpenAPI documentation
+- Dockerized development environment
 
 ## Tech Stack
 
 | Technology | Version | Purpose |
 |---|---|---|
-| **Fastify** | 5.x | HTTP framework with Zod type provider |
-| **Drizzle ORM** | 0.38.x | PostgreSQL query builder |
-| **PostgreSQL** | — | Relational database |
-| **Zod** | 3.x | Schema validation |
-| **TypeScript** | 5.x | Type safety |
+| **Fastify** | 5.x | High-performance HTTP framework |
+| **Drizzle ORM** | 0.38.x | Type-safe SQL query builder |
+| **PostgreSQL** | 16.x | Relational database |
+| **Zod** | 3.x | Schema validation with type inference |
+| **TypeScript** | 5.x | End-to-end type safety |
+| **Docker** | — | Containerized development |
 
 ## API Endpoints
 
 | Method | Route | Description |
 |---|---|---|
 | `POST` | `/goals` | Create a new weekly goal |
-| `POST` | `/completions` | Mark a goal as completed for the day |
-| `GET` | `/pending-goals` | Get pending goals for the current week |
+| `POST` | `/completions` | Mark a goal as completed |
+| `GET` | `/pending-goals` | Get pending goals for current week |
 | `GET` | `/summary` | Get weekly completion summary |
-
-## Database Schema
-
-- **goals** — `id`, `title`, `desiredWeeklyFrequency`, `createdAt`
-- **goalCompletions** — `id`, `goalId` (FK → goals), `createdAt`
 
 ## Getting Started
 
 ```bash
+# Clone
 git clone https://github.com/rafaumeu/inorbit-api.git
 cd inorbit-api
+
+# Install
 npm install
-```
 
-Create a `.env` file:
+# Set up environment
+cp .env.example .env
 
-```env
-DATABASE_URL=postgresql://user:password@localhost:5432/inorbit
-```
+# Run with Docker (PostgreSQL)
+docker compose up -d
 
-```bash
-# Run database migrations
-npx drizzle-kit migrate
-
-# Seed with sample data
-npm run seed
-
-# Start development server
+# Start dev server
 npm run dev
 ```
 
-The server runs on `http://localhost:3000`.
+### Environment Variables
+
+```env
+DATABASE_URL=postgresql://docker:docker@localhost:5432/inorbit
+```
+
+## Database Schema
+
+```
+goals
+├── id (UUID, PK)
+├── title (VARCHAR)
+├── desiredWeeklyFrequency (INTEGER)
+└── createdAt (TIMESTAMP)
+
+goalCompletions
+├── id (UUID, PK)
+├── goalId (UUID, FK → goals)
+└── createdAt (TIMESTAMP)
+```
 
 ## Project Structure
 
 ```
 src/
-├── db/          # Database connection, schema, and seed
-├── functions/   # Business logic (create goal, create completion, queries)
+├── db/
+│   ├── connection.ts
+│   ├── schema/
+│   └── migrations/
 ├── http/
-│   ├── routes/  # Route handlers
+│   ├── routes/
 │   └── server.ts
-└── env.ts       # Environment variable validation
+└── env.ts
 ```
 
 ## License
 
-ISC
+MIT
+
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=100&section=footer"/>
+  <br/>
+  <sub>Built with ❤️ by <a href="https://github.com/rafaumeu">Rafael Zendron</a></sub>
+</div>
