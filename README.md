@@ -108,3 +108,8 @@ MIT
   <br/>
   <sub>Built with ❤️ by <a href="https://github.com/rafaumeu">Rafael Zendron</a></sub>
 </div>
+
+<p align="center">
+  [![Use this template](https://img.shields.io/badge/Use_This_Template-FF0080?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu/inorbit-api/generate)
+</p>
+
