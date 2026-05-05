@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=180&section=header&text=InOrbit%20API&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Goal%20Tracking%20REST%20API&descSize=18&descAlignY=52"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=180&section=header&text=InOrbit%20API&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Goal%20Tracking%20REST%20API&descSize=18&descAlignY=52"/>
 </div>
 
 <p align="center">
@@ -104,12 +104,12 @@ src/
 MIT
 
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=100&section=footer"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=100&section=footer"/>
   <br/>
   <sub>Built with ❤️ by <a href="https://github.com/rafaumeu">Rafael Zendron</a></sub>
 </div>
 
 <p align="center">
-  [![Use this template](https://img.shields.io/badge/Use_This_Template-FF0080?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu/inorbit-api/generate)
+  [![Use this template](https://img.shields.io/badge/Use_This_Template-FFCA28?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu/inorbit-api/generate)
 </p>
 
