@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch --env-file .env  src/http/server.ts",
-    "seed": "tsx --env-file .env src/db/seed.ts"
+    "build": "tsup src/http/server.ts --out-dir build --format esm",
+    "postbuild": "drizzle-kit push",
+    "start": "node build/server.mjs",
+    "seed": "tsx --env-file .env src/db/seed.ts",
+    "db:push": "drizzle-kit push"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +19,7 @@
     "@types/node": "^22.10.6",
     "drizzle-kit": "^0.30.1",
     "exact": "^1.0.1",
+    "tsup": "^8.5.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "zod": "^3.24.1"

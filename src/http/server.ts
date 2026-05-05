@@ -24,9 +24,8 @@ app.register(getPendingRoute)
 app.register(getWeekSummaryRoute)
 app.register(getGoalStatsRoute)
 
-app.listen({ port: 3000 }).then(() => {
+app.listen({ port: Number(process.env.PORT) || 3333, host: '0.0.0.0' }).then(() => {
   console.log(`
-    Server listening on port 3000
-    acesse em: http://localhost:3000
+    Server listening on port ${process.env.PORT || 3333}
   `)
 })
