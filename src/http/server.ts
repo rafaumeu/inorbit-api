@@ -12,12 +12,18 @@ import { getGoalStatsRoute } from './routes/get-goal-stats'
 import { getPendingRoute } from './routes/get-pending-goals'
 import { getWeekSummaryRoute } from './routes/get-week-summary'
 
+import swaggerPlugin from '../plugins/swagger.js'
+
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 app.register(fastifyCors, {
   origin: '*',
 })
 app.setValidatorCompiler(validatorCompiler)
 app.setSerializerCompiler(serializerCompiler)
+
+// Swagger must be registered BEFORE routes
+app.register(swaggerPlugin)
+
 app.register(createGoalRoute)
 app.register(createCompletionRoute)
 app.register(getPendingRoute)
