@@ -44,6 +44,26 @@ A high-performance REST API for weekly goal tracking built with **Fastify** and 
 | `GET` | `/pending-goals` | Get pending goals for current week |
 | `GET` | `/summary` | Get weekly completion summary |
 
+## API Documentation
+
+Interactive Swagger UI available at `/docs` when running the server.
+
+### Endpoints
+
+| Method | Route | Description |
+|---|---|---|
+| `POST` | `/goals` | Create a new weekly goal |
+| `POST` | `/completions` | Mark a goal as completed |
+| `GET` | `/pending-goals` | Get pending goals for current week |
+| `GET` | `/summary` | Get weekly completion summary |
+| `GET` | `/stats` | Get goal statistics |
+
+### Generate Typed Client
+
+```bash
+npx orval  # generates typed API client from OpenAPI spec
+```
+
 ## Getting Started
 
 ```bash
