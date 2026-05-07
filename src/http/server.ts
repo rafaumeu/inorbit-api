@@ -24,6 +24,11 @@ app.setSerializerCompiler(serializerCompiler)
 // Swagger must be registered BEFORE routes
 app.register(swaggerPlugin)
 
+// Health check endpoint
+app.get('/health', async () => {
+  return { status: 'ok', timestamp: new Date().toISOString() }
+})
+
 app.register(createGoalRoute)
 app.register(createCompletionRoute)
 app.register(getPendingRoute)
