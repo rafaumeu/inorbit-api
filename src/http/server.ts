@@ -1,6 +1,7 @@
 import fastify from 'fastify'
 
 import fastifyCors from '@fastify/cors'
+import rateLimit from '@fastify/rate-limit'
 import {
   type ZodTypeProvider,
   serializerCompiler,
@@ -28,6 +29,8 @@ app.register(swaggerPlugin)
 app.get('/health', async () => {
   return { status: 'ok', timestamp: new Date().toISOString() }
 })
+
+app.register(rateLimit, { max: 100, timeWindow: '1 minute' })
 
 app.register(createGoalRoute)
 app.register(createCompletionRoute)
