@@ -3,12 +3,15 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify" alt="Fastify"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=for-the-badge" alt="Drizzle ORM"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker" alt="Docker"/>
-  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger" alt="Swagger"/>
+  <img src="https://img.shields.io/badge/Node-22-green" alt="Node"/>
+  <img src="https://img.shields.io/badge/Fastify-5-000000?style=for-the-badge&logo=fastify" alt="Fastify"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Drizzle_ORM-0.38-C5F74F?style=for-the-badge" alt="Drizzle ORM"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Vitest-4-6E9F18" alt="Vitest"/>
+  <img src="https://img.shields.io/badge/Docker-ready-2496ED?style=for-the-badge&logo=docker" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Swagger-UI-85EA2D?style=for-the-badge&logo=swagger" alt="Swagger"/>
+  <img src="https://img.shields.io/badge/Biome-ready-60A5FA?style=for-the-badge&logo=biome" alt="Biome"/>
 </p>
 
 ## Overview
