@@ -51,6 +51,8 @@ A high-performance REST API for weekly goal tracking built with **Fastify** and 
 
 Interactive Swagger UI available at `/docs` when running the server.
 
+![Swagger UI](screenshots/swagger-ui-expanded.png)
+
 ### Endpoints
 
 | Method | Route | Description |
